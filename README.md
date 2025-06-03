@@ -1,51 +1,54 @@
-
-
-````
+````markdown
 # Responsive Feed Component CSS
 
-This repository contains CSS styles for a responsive feed component designed for React or other frontend projects. It features a clean input section and an input options area that adapt seamlessly across desktop, tablet, and mobile screen sizes without causing unwanted scrollbars.
+This repository contains CSS styles for a responsive feed component, designed to be used with React or similar frontend frameworks. The styles create a clean, flexible input area and options section that adjust smoothly across different screen sizes without causing unwanted scrollbars.
 
 ## Features
 
-- Responsive layout with flexible widths and padding
-- Styled input container with rounded corners and shadows
-- Input field that grows/shrinks responsively
-- Input options area that wraps or stacks depending on screen size
-- Prevents horizontal scrollbars on smaller screens
+- Flexible and responsive feed container with max-width control
+- Stylish input container with rounded corners and subtle shadows
+- Input field that expands and wraps nicely on smaller screens
+- Input options section that adapts layout from horizontal to vertical on mobile
+- Prevents horizontal scrollbars by handling overflow and flexible sizing
 
-## Usage
+## How to Use
 
-Include the CSS styles in your project and use the following HTML/JSX structure:
+1. Add the CSS file (`Feed.css`) to your project.
+2. Apply the following class names to your JSX/HTML structure:
 
-```html
-<div class="feed">
-  <div class="feed__inputContainer">
-    <div class="feed__input">
-      <input type="text" placeholder="Search or post something..." />
+```jsx
+<div className="feed">
+  <div className="feed__inputContainer">
+    <div className="feed__input">
+      <input type="text" placeholder="Write something..." />
     </div>
-    <div class="feed__inputOptions">
-      <!-- Input option buttons or icons -->
+    <div className="feed__inputOptions">
+      {/* Your input option buttons/icons here */}
     </div>
   </div>
 
-  <!-- Feed posts go here -->
+  {/* Your feed posts/components here */}
 </div>
 ````
 
+3. Make sure your parent containers allow the `.feed` component to expand up to 700px max-width or 100% on smaller screens.
+
 ## Responsive Behavior
 
-* On desktop and tablets, the input and options align horizontally with spacing.
-* On mobile (screen width ≤ 480px), the input and options stack vertically for better usability.
+* On large screens, input and options align horizontally with spacing.
+* On tablets, padding adjusts to fit screen width without overflow.
+* On mobile devices (≤480px), input box and options stack vertically for better usability.
 
-## Notes
+## Troubleshooting
 
-* The `.feed` container uses `overflow-x: hidden` to prevent horizontal scrolling.
-* Input field has a minimum width but adjusts on small devices.
-* Ensure child elements do not exceed container width to maintain layout integrity.
+* If you see horizontal scrollbars, check for any child elements that exceed container widths.
+* Use `box-sizing: border-box;` to ensure padding does not increase total width.
+* Adjust the `min-width` of input fields carefully for very small screens.
 
 ## License
 
-MIT © 2025 Syed Laeeq Ahmed
+This project is open source under the MIT License.
+© 2025 Syed Laeeq Ahmed
 
 ```
-
+```
