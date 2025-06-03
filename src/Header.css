@@ -26,7 +26,8 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
-    height: 22px;
+    width: 250px;
+    height: 24px;
     color: gray;
     background-color: #eef3f8;
 }
@@ -36,9 +37,11 @@
     outline: none;
     border: none;
     background: none;
+    width: 250px;
 }
 
 .header__right {
 display: flex;
+align-items: center;
 
 }

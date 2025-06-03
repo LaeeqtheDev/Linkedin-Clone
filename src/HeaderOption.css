@@ -22,3 +22,10 @@
     height: 25px !important;
     width: 25px !important;
 }
+
+
+.headerOption__link {
+    text-decoration: none;   /* Removes underline */
+    color: inherit;          /* Inherits the text color from parent (e.g., gray, black) */
+  }
+  

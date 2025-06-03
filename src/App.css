@@ -1,10 +1,17 @@
-.app{
-    background-color: #f3f2ef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.app {
+  background-color: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height */
 }
 
-.app__body{
-    display: flex;
+.app__body {
+  display: flex;            /* side by side */
+  flex: 1;                  /* take all vertical space below header */
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;           /* center horizontally */
+  align-items: flex-start;
+  overflow-y: auto;         /* scroll if needed */
 }
